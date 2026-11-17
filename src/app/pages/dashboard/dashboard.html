@@ -1,0 +1,41 @@
+<div class="grid grid-cols-12 gap-8">
+    <div class="col-span-12">
+        <div class="card">
+            <h2 class="text-xl font-semibold m-0 mb-2">Dashboard</h2>
+            <p class="text-surface-600 dark:text-surface-300 m-0">
+                Location access is requested after login so we can save your geolocation.
+            </p>
+        </div>
+    </div>
+</div>
+
+<p-dialog
+    header="Location Access"
+    [(visible)]="showLocationDialog"
+    [modal]="true"
+    [closable]="false"
+    [draggable]="false"
+    [resizable]="false"
+    [style]="{ width: '350px' }">
+    <div class="flex items-center justify-center">
+        <i class="pi pi-map-marker mr-4" style="font-size: 2rem"></i>
+        <span>Allow access to your location?</span>
+    </div>
+    <ng-template #footer>
+        <p-button
+            label="No"
+            icon="pi pi-times"
+            (click)="declineLocationAccess()"
+            text
+            severity="secondary" />
+        <p-button
+            label="Yes"
+            icon="pi pi-check"
+            (click)="acceptLocationAccess()"
+            autofocus />
+    </ng-template>
+</p-dialog>
+
+<div *ngIf="isLoading" class="loading-overlay">
+    <p-progressSpinner strokeWidth="4" animationDuration=".8s" styleClass="custom-spinner"></p-progressSpinner>
+</div>

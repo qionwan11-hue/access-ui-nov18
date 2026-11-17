@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@use './tailwind.css';
+@use './layout/layout.scss';
+@use 'primeicons/primeicons.css';
+.logo-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.logo-image-after-login{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

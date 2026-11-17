@@ -1,0 +1,15 @@
+<div class="bg-surface-0 dark:bg-surface-900 min-h-screen">
+    <div id="home" class="landing-wrapper overflow-x-clip">
+        <topbar-widget class="sticky top-0 z-50 py-4 px-6 lg:px-20 flex items-center justify-between bg-surface-0 dark:bg-surface-900 shadow-sm" />
+        <div class="flex flex-col items-center justify-center px-6 py-24 text-center gap-6">
+            <h1 class="text-surface-900 dark:text-surface-0 text-3xl lg:text-5xl font-semibold m-0">Welcome</h1>
+            <p class="text-surface-600 dark:text-surface-200 text-lg m-0 max-w-xl">
+                Sign in or create an account to continue.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <button pButton pRipple label="Sign in" routerLink="/auth/login" severity="secondary" class="w-full sm:w-auto"></button>
+                <button pButton pRipple label="Sign Up" routerLink="/auth/register" severity="info" class="w-full sm:w-auto"></button>
+            </div>
+        </div>
+    </div>
+</div>
